@@ -1,0 +1,2 @@
+This website is still in developement. The checkout flow pages and some of the functionality of the website is still under developement.
+I will rework the website using React.JS and the JSON file format. While making this website I faced new challenges like: customizability this website was designed for small to medium furniture production companies, I had to make the design and the code with scalability in mind, I wanted to make the user experience simple and fast. 
