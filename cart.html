@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="description" content="Slave Angelovski third portfolio website.">
+	<meta name="keywords" content="example website, portfolio site, exercise">
+	<meta name="author" content="Slave Angelovski"> 
+	<title>FURNITURE website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="nouislider.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+
+<body>
+	<header class="header center-vh">
+		<div class="header-container center-h height-100">
+			<div class="mobile-menu-icon">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<nav class="height-100">
+				<div class="close-button"></div>
+				<ul class="height-100 center-h">
+					<li class="height-100 center-h"><a href="products.html">PRODUCTS</a></li>
+					<li class="height-100 center-h"><a href="about_us.html">ABOUT US</a></li>
+					<li class="height-100 center-h"><a href="showrooms.html">SHOWROOMS</a></li>
+					<li class="height-100 center-h"><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+			<div class="logo-container"><p><a href="index.html">LOGO</a></p></div>
+			<div class="nav-right height-100">
+				<div class="close-search-button"></div>
+				<ul class="height-100 center-h">
+					<li id="search-li" class="height-100 center-h">
+						<a id="search" href="#">SEARCH</a>
+						<form id="form" action="#">
+      						<input id="search-input" type="text" placeholder="Search.." name="search">
+      						<button type="submit">SUBMIT</button>
+    					</form>
+					</li>
+					<li class="height-100 center-h"><a href="#">CART (0)</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="mobile-menu">
+		<div class="icon-container mobile-menu-icon">
+			<img src="images/menu-mobile.png">
+			<p>MENU</p>
+		</div>
+		<div class="icon-container search-menu-mobile">
+			<img src="images/search-mobile.png">
+			<p>SEARCH</p>
+		</div>
+		<div class="icon-container">
+			<div class="cart-cont-mobile">
+			<img src="images/cart_mobile.png">
+			<p class="qty">( 0 )</p>	
+			</div>
+			<p>GO TO CART</p>
+		</div>
+		<div class="icon-container scroll-to-top">
+			<img src="images/go-up-mobile.png">
+			<p>GO TO TOP</p>
+		</div>
+	</div>
+	<main class="center-h">
+		<div class="cart-items-container">
+			<div class="details-header">
+				<div class="table-text">ITEM</div>
+				<div class="table-text">NAME</div>
+				<div class="table-text">PRICE</div>
+				<div class="table-text">QUANTITY</div>
+				<div class="table-text">TOTAL</div>
+				<div class="delete-container">
+					<label class="control control--checkbox option">
+						<input type="checkbox">
+						<div class="control__indicator"></div>
+					</label>
+					<div class="down-arrow">▼</div>
+					<div class="delete"></div>
+				</div>
+			</div>
+			<div class="cart-items center-h">
+				<div class="cart-items-img">
+					<img src="images/chair1.png">
+				</div>
+				<div class="item-desctiption">
+					<h2>CASSINA 395 P22 CHAIR</h2>
+					<div class="prices-container">
+						<p class="price">2500€</p>
+						<p class="discount">-10%</p>
+					</div>
+				</div>
+				<div class="cart-details">
+					<div class="minus-button"></div>
+					<div class="cart-container">
+						<form>
+							<input type="text" name="quantity" value="0">
+						</form>
+					</div>
+					<div class="plus-button"></div>
+				</div>
+				<div class="total">7500€</div>
+				<div class="delete"></div>
+				<label class="control control--checkbox option">
+					<input type="checkbox">
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+			<div class="cart-items center-h">
+				<div class="cart-items-img">
+					<img src="images/chair2.png">
+				</div>
+				<div class="item-desctiption">
+					<h2>ENAMES CHAIR</h2>
+					<div class="prices-container">
+						<p class="price">700€</p>
+						<p class="discount"></p>
+					</div>
+				</div>
+				<div class="cart-details">
+					<div class="minus-button"></div>
+					<div class="cart-container">
+						<form>
+							<input type="text" name="quantity" value="0">
+						</form>
+					</div>
+					<div class="plus-button"></div>
+				</div>
+				<div class="total">700€</div>
+				<div class="delete"></div>
+				<label class="control control--checkbox option">
+					<input type="checkbox">
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+			<div class="cart-items center-h">
+				<div class="cart-items-img">
+					<img src="images/chair3.png">
+				</div>
+				<div class="item-desctiption">
+					<h2>ACAPULCO OUTDOOR CHAIR</h2>
+					<div class="prices-container">
+						<p class="price">200€</p>
+						<p class="discount"></p>
+					</div>
+				</div>
+				<div class="cart-details">
+					<div class="minus-button"></div>
+					<div class="cart-container">
+						<form>
+							<input type="text" name="quantity" value="0">
+						</form>
+					</div>
+					<div class="plus-button"></div>
+				</div>
+				<div class="total">200€</div>
+				<div class="delete"></div>
+				<label class="control control--checkbox option">
+					<input type="checkbox">
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+			<div class="cart-items center-h">
+				<div class="cart-items-img">
+					<img src="images/chair4.png">
+				</div>
+				<div class="item-desctiption">
+					<h2>WING CHAIR</h2>
+					<div class="prices-container">
+						<p class="price">1700€</p>
+						<p class="discount"></p>
+					</div>
+				</div>
+				<div class="cart-details">
+					<div class="minus-button"></div>
+					<div class="cart-container">
+						<form>
+							<input type="text" name="quantity" value="0">
+						</form>
+					</div>
+					<div class="plus-button"></div>
+				</div>
+				<div class="total">1700€</div>
+				<div class="delete"></div>
+				<label class="control control--checkbox option">
+					<input type="checkbox">
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+			<div class="cart-items center-h">
+				<div class="cart-items-img">
+					<img src="images/chair2.png">
+				</div>
+				<div class="item-desctiption">
+					<h2>CASSINA 395 P22 CHAIR</h2>
+					<div class="prices-container">
+						<p class="price">2500€</p>
+						<p class="discount"></p>
+					</div>
+				</div>
+				<div class="cart-details">
+					<div class="minus-button"></div>
+					<div class="cart-container">
+						<form>
+							<input type="text" name="quantity" value="0">
+						</form>
+					</div>
+					<div class="plus-button"></div>
+				</div>
+				<div class="total">2500€</div>
+				<div class="delete"></div>
+				<label class="control control--checkbox option">
+					<input type="checkbox">
+					<div class="control__indicator"></div>
+				</label>
+			</div>
+		</div>
+	</main>
+	<!-- <script src="scripts/header.js"></script>
+	<script src="scripts/nouislider.min.js"></script> -->
+	<!-- <script src="scripts/products.js"></script> -->
+	<!-- <script src="scripts/scroll-script-min.js"></script> -->
+</body>
+</html>

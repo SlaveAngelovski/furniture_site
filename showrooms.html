@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="description" content="Slave Angelovski third portfolio website.">
+	<meta name="keywords" content="example website, portfolio site, exercise">
+	<meta name="author" content="Slave Angelovski"> 
+	<title>FURNITURE website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
+<body>
+	<header class="header center-vh">
+		<div class="header-container center-h height-100">
+			<div class="mobile-menu-icon">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<nav class="height-100">
+				<div class="close-button"></div>
+				<ul class="height-100 center-h">
+					<li class="height-100 center-h"><a href="products.html">PRODUCTS</a></li>
+					<li class="height-100 center-h"><a href="about_us.html">ABOUT US</a></li>
+					<li class="height-100 center-h active"><a href="showrooms.html">SHOWROOMS</a></li>
+					<li class="height-100 center-h"><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+			<div class="logo-container"><p><a href="index.html">LOGO</a></p></div>
+			<div class="nav-right height-100">
+				<div class="close-search-button"></div>
+				<ul class="height-100 center-h">
+					<li id="search-li" class="height-100 center-h">
+						<a id="search" href="#">SEARCH</a>
+						<form id="form" action="#">
+      						<input id="search-input" type="text" placeholder="Search.." name="search">
+      						<button type="submit">SUBMIT</button>
+    					</form>
+					</li>
+					<li class="height-100 center-h"><a href="#">CART (0)</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="mobile-menu">
+		<div class="icon-container mobile-menu-icon">
+			<img src="images/menu-mobile.png">
+			<p>MENU</p>
+		</div>
+		<div class="icon-container search-menu-mobile">
+			<img src="images/search-mobile.png">
+			<p>SEARCH</p>
+		</div>
+		<div class="icon-container">
+			<a href="products.html">
+			<img src="images/go-back-mobile.png">
+			<p>GO BACK</p>
+			</a>
+		</div>
+		<div class="icon-container scroll-to-top">
+			<img src="images/go-up-mobile.png">
+			<p>GO TO TOP</p>
+		</div>
+	</div>
+	<main class="center-h">
+		<div class="h1-container">
+			<h1 class="h1-top">SHOWROOMS</h1>
+		</div>
+		<div class="img-container-showroom">
+			<img src="images/showroom1.jpg">
+			<img src="images/showroom2.jpg">
+		</div>
+		<div class="text-container-showrooms center-h">
+			<div class="drop-down-container center-h">
+				<h1>SHOWROOMS</h1>
+				<div class="s-box">
+					<form>
+						<fieldset>
+							<select name="CHOOSE COUNTRY ▼" class="select-box" id="country">
+								<option value="">CHOOSE COUNTRY ▼</option>
+								<option value="denmark">DENMARK</option>
+								<option value="norway">NORWAY</option>
+								<option value="sweden">SWEDEN</option>
+								<option value="england">ENGLAND</option>
+							</select>
+							<select name="CHOOSE CITY ▼" class="select-box" id="city" disabled>
+								<option value="">CHOOSE CITY ▼</option>
+								<option value="copenhagen">COPENHAGEN</option>
+								<option value="odense">ODENSE</option>
+								<option value="aarhus">AARHUS</option>
+								<option value="esbjerg">ESBJERG</option>
+							</select>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+			<div class="stores-container">
+				<div class="store-text">
+					<h3>STORE ONE</h3>
+					<p>Krogvænget 25</br>
+						1622 København V</br>
+						number: 29-11-22-33</br> 
+						hours: 08:00 - 16:30</br>
+						store1@mail.com
+					</p>
+				</div>
+				<div class="store-text">
+					<h3>STORE TWO</h3>
+					<p>Krogvænget 25</br>
+						1622 København V</br>
+						number: 29-11-22-33</br> 
+						hours: 08:00 - 16:30</br>
+						store1@mail.com
+					</p>
+				</div>
+				<div class="store-text">
+					<h3>STORE THREE</h3>
+					<p>Krogvænget 25</br>
+						1622 København V</br>
+						number: 29-11-22-33</br> 
+						hours: 08:00 - 16:30</br>
+						store1@mail.com
+					</p>
+				</div>
+				<div class="store-text">
+					<h3>STORE FOUR</h3>
+					<p>Krogvænget 25</br>
+						1622 København V</br>
+						number: 29-11-22-33</br> 
+						hours: 08:00 - 16:30</br>
+						store1@mail.com
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="scripts/header.js"></script>
+	<script src="scripts/showrooms.js"></script>
+	<script src="scripts/scroll-script-min.js"></script>
+</body>
+</html>

@@ -1,0 +1,609 @@
+header {
+	height: 3.3em;
+	color: $text-color;
+	background-color: $header-bg;
+	border-bottom: 1px solid $header-border;
+	z-index: 2;
+	position: relative;
+	.mobile-menu-icon {
+		display: none;
+		flex-direction: column;
+		justify-content: space-between;
+	    height: 1.7em;
+	    width: 2em;
+	    position: absolute;
+	    top: 25%;
+	    left: 13%;
+		@media only screen and (max-width: 1000px) {
+			display: flex;
+		}
+		div {
+			width: 100%;
+			height: 0.3em;
+			background-color: $border-color;
+			border-radius: 14%;
+		}
+	}
+	#header-container { // on klick show the mobile menu
+		width: 100vw;
+		height: 100vh;
+		flex-basis: unset;
+		background-color: $bg-color-opac;
+		position: fixed;
+		justify-content: unset;
+		z-index: 1;
+		.close-button {
+			display: flex;
+		}
+		.mobile-menu-icon {
+			display: none;
+		}
+		nav {
+			display: flex;
+			width: 80%;
+			padding: 20% 0 0 0;
+			background-color: $bg-color;
+			ul {
+				flex-direction: column;
+			    font-size: 2em;
+			    width: 84%;
+			    flex-grow: unset;
+			    height: 48%;
+			    align-items: self-end;
+				@media only screen and (max-width: 1000px) {
+					font-size: 1.6em;
+				}
+			    li {
+					height: auto;
+					margin: 0 0 0 20%;
+			    }
+			}
+		}
+		.logo-container {
+			display: none;
+		}
+	}
+	.header-container {
+		flex-direction: row;
+		flex-basis: 85.45%;
+		@media only screen and (max-width: 1700px) {
+			flex-basis: 95.45%;
+		}
+		@media only screen and (max-width: 1000px) {
+			justify-content: center;
+			
+		}
+		nav {  
+			width: 28em;
+			font-size: 0.73em;
+			@media only screen and (max-width: 1000px) {
+				display: none;
+			}
+			ul {
+				justify-content: space-between;
+				flex-grow: 1;
+				white-space: nowrap;
+				li {
+					border-bottom: 2px solid $underline-menu;
+					&:hover {
+						@include css3-prefix (transition, border 0.5s ease-in-out);
+						border-bottom: 2px solid $text-color;
+					}
+				}
+			}
+		}
+		.logo-container {
+			margin: 0 0 0 calc(45vw - 504px);
+			@media only screen and (max-width: 1700px) {
+				margin: 0 0 0 calc(50.5vw - 504px);
+			}
+			@media only screen and (max-width: 1180px) {
+				margin: 0 0 0 4.5vw;
+			}
+			@media only screen and (max-width: 1000px) {
+				margin: 0;
+			}
+			p {
+				font-size: 2em;
+				font-weight: 900;
+				color: $text-red;
+			}
+		}
+		.nav-right {
+			white-space: nowrap;
+			font-size: 0.73em;
+			margin-left: auto;
+			width: 10em;
+			@media only screen and (max-width: 1180px) {
+				font-size: 1.6vw;
+			}
+			@media only screen and (max-width: 1000px) {
+				display: none;
+			}
+			ul {
+				justify-content: space-between;
+				flex-grow: 1;
+				li {
+					border-bottom: 2px solid $underline-menu;
+					&:hover {
+						@include css3-prefix (transition, border 0.5s ease-in-out);
+						border-bottom: 2px solid $text-color;
+						@media only screen and (max-width: 1000px) {
+							border-bottom: none;
+						}
+					}
+					#form {
+						@extend %smooth-opac;
+						display: none;
+						opacity: 0;
+						@media only screen and (max-width: 1000px) {
+							flex-direction: column !important;
+							width: 90%;
+						}
+					}
+
+					input {
+						border-top: none;
+						border-right-style: none;
+						border-bottom: 1px solid;
+						border-left: none;
+						font-size: 1em;
+						color: $text-color;
+						background-color: transparent;
+						margin: 0 0.3em 0 0;
+					}
+					button {
+						border-style: none;
+						font-size: 1em;
+						color: $text-color;
+						background-color: transparent;
+						@media only screen and (max-width: 1000px) {
+							align-self: center;
+							font-size: 0.8em;
+    						margin: 15% auto auto auto;
+						}
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+		.search-input {
+			width: 20em;
+			@media only screen and (max-width: 1000px) {
+				width: 70%;
+			}
+		}
+		#search-menu-mobile {// show search for mobile on click
+			display: flex;
+		    height: 100vh;
+		    width: 100vw;
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    z-index: 2;
+		    font-size: 1.4em;
+		    background: $bg-color-opac;
+		    .close-search-button {
+		    	display: flex !important;
+				height: 2em;
+				width: 2em;
+				margin: 5% 0 0 60%;
+				border-radius: 5px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				color: $border-color;
+			}
+			.close-search-button:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: "\274c";
+				font-size: 1.5em;
+				line-height: 100px;
+				text-align: center;
+				justify-content: center;
+				align-items: center;
+				display: flex;
+			}
+		    ul {
+		    	height: 100vh;
+    			width: 80%;
+    			flex-grow: unset;
+    			padding: 0;
+    			background: $filters-bg;
+    			#search-li {
+    				margin: 36% auto auto auto;
+   					width: 100%;
+   					height: auto;
+   					justify-content: center;
+    			}
+    			li:nth-child(2) {
+    				display: none;
+    			}
+		    }
+		}
+	}
+}
+//style for the desktop filter menu
+.filter-menu {
+	.filter-header-mobile {
+		justify-content: space-between;
+		width: 89%;
+		align-items: center;
+		font-size: 0.8em;
+		position: sticky;
+		top: 0;
+		left: 0;
+		@media only screen and (min-width: 1000px) {
+			display: none;
+		}
+		p {
+
+		}
+		.fliter-btn {
+			@extend %btn;
+			padding: 0.4em 1em;
+		}
+	}
+	.fixed-filter-header {
+		position: fixed;
+		width: 100%;
+		justify-content: space-between;
+		top: 0;
+		left: 0;
+		margin: 0 auto 0 auto;
+		right: 0;
+		background-color: $filters-bg;
+		height: 2.5em;
+		padding: 0 5%;
+	}
+	.filter-container {
+		position: absolute;
+		top: 3.3em;
+		left: 0;
+		height: 2em;
+		background-color: $filters-bg;
+		width: 100%;
+		.filter-content {
+			height: 100%;
+			font-size: 0.8em;
+			width: 74%;
+			@media only screen and (max-width: 1600px) {
+				width: 100%;
+			}
+			@media only screen and (max-width: 1000px) {
+				display: none;
+				font-size: 0.6em;
+			}
+			ul {
+				height: 100%;
+				width: 100%;
+				justify-content: space-around;
+				li {
+					height: 100%;
+					cursor: pointer;
+					border: 2px solid $underline-menu;
+					&:hover {
+						@include css3-prefix (transition, border 0.5s ease);
+						color: $text-dark;
+						border-bottom: 2px solid $text-color;
+					}
+				}
+				.active-submenu {
+					background-color: $sub-menu-bg;
+				}
+			}
+		}
+	}
+	#filter-container {// on click override the filter menu mobile version 
+		justify-content: unset;
+		width: 100vw;
+    	height: 100vh;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	background-color: $bg-color-opac;
+    	.close-button {
+		display: flex;
+		}
+		.filter-header-mobile {
+			display: none;
+		}
+    	.filter-content {
+		    height: 100%;
+		    display: flex;
+		    width: 80%;
+		    padding: 20% 0 0 0;
+		    background-color: $bg-color;
+			@media only screen and (min-width: 1000px) {
+				font-size: 1.7em;
+			}
+		    ul {
+		    	font-size: 1.8em;
+		    	flex-direction: column;
+			    font-size: 2em;
+			    width: 84%;
+			    flex-grow: unset;
+			    height: 76%;
+			    align-items: self-end;
+			    padding: 0 0 0 16%;
+			    li{
+			    	white-space: nowrap;
+			    }
+		    }
+    	}
+	}
+}
+
+#category-sub {
+	width: 31.5em;
+	left: 9vw;
+	@media only screen and (max-width: 1600px) {
+		left: 2vw;
+	}
+}
+.category-sub {// general style for filter submenu
+	display: none;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 5.9em;
+	left: 5vw;
+	background: $sub-menu-bg;
+	font-size: 0.9em;
+	@media only screen and (max-width: 1000px) {
+		position: fixed !important;
+		background: #e6e6e6;
+		width: 80% !important;
+		height: 100vh !important;
+		top: 0 !important;
+		left: 0 !important;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 1.2em;
+		align-items: center;
+	}
+	.option-container {
+			width: 100%;
+			height: 100%;
+			flex-wrap: wrap;
+		@media only screen and (max-width: 1000px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 76%;
+			padding: 0 0 0 9%;
+			margin: 0; 
+		}
+		.option {
+			margin: 0.5em 0 0.5em 2em;
+			align-items: flex-start;
+			font-size: 0.9em;
+			padding: 0 0 0 1.6em;
+			@media only screen and (max-width: 1000px) {
+				justify-content: unset;
+				width: 100%;
+				align-items: center;
+				margin: 0 0 10% 0;
+			}
+			span {
+				order: 2;
+				white-space: nowrap;
+				font-size: 0.9em;
+				align-items: center;
+				@media only screen and (max-width: 1000px) {
+					white-space: nowrap;
+					margin: 0 0.5em 0 0;
+					font-size: 0.9em;
+					align-items: center;
+				}
+			}
+			label {
+				margin: 0 0.5em 0 0;
+				input {
+
+				}
+				.control__indicator {
+				}
+
+			}
+		}
+	}
+}
+#color-sub {
+	display: none;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 5.9em;
+	left: 21vw;
+	background: $sub-menu-bg;
+	font-size: 0.9em;
+	width: 22em;
+	padding: 1em;
+	@media only screen and (max-width: 1600px) {
+		left: 12vw;
+	}
+	@media only screen and (max-width: 1000px) {
+		position: fixed;
+	    background: $sub-menu-bg;
+	    width: 80% !important;
+	    height: 100vh  !important;
+	    top: 0  !important;
+	    left: 0  !important;
+	    font-size: 1.2em;
+	    align-items: center;
+	}
+	.color-container {
+		// padding: 0.7em 0;
+		@media only screen and (max-width: 1000px) {
+			width: 100%;
+		    height: 80%;
+		    flex-wrap: wrap;
+		    justify-content: center;
+		    padding: 0;
+		    align-items: center;
+		}
+		.color-box {
+			margin: 0 1em 0 0;
+			height: 2em;
+			width: 2em;
+			@media only screen and (max-width: 1000px) {
+				margin: 0 8%;
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+		.selected-color-box {
+			border: 4px double;
+			box-shadow: 1px 1px 4px 0px inset;
+		}
+		#col-box1 {
+			background-color: $black;
+		}
+		#col-box2 {
+			background-color: $white;
+		}
+		#col-box3 {
+			background-color: $grey;
+		}
+		#col-box4 {
+			background-color: $orange;
+		}
+		#col-box5 {
+			background-color: $green;
+		}
+		#col-box6 {
+			background-color: $blue;
+		}
+		#col-box7 {
+			background-color: $red;
+		}
+	}
+}
+#material-sub {
+	left: 31vw;
+	width: 27.5em;
+	@media only screen and (max-width: 1600px) {
+		left: 23vw;
+	}
+}
+#wood-sub {
+	left: 43vw;
+	width: 26.5em;
+	@media only screen and (max-width: 1600px) {
+		left: 40vw;
+	}
+}
+#sort-sub {
+	right: 21vw;
+	left: unset;
+	width: 24em;
+	@media only screen and (max-width: 1600px) {
+		right: 11vw;
+	}
+	@media only screen and (max-width: 360px) {
+		font-size: 1em;
+	}
+}
+#price-slider-sub {
+	display: none;
+	height: 5.5em;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 5.9em;
+	right: 12.5vw;
+	background: $sub-menu-bg;
+	width: 15em;
+	padding: 0 1em;
+	@media only screen and (max-width: 1600px) {
+		right: 1vw;
+	}
+	@media only screen and (max-width: 1000px) {
+		width: 80%;
+	    top: 0;
+	    left: 0;
+	    position: fixed;
+	    height: 100vh;
+	    padding: 30% 5%;
+	}
+	.back-button:before {
+		top: -14px;
+	}	
+	#slider-container {
+		width: 100%;
+		margin: 0.5em 0 0 0;
+	}
+	.prices-container{
+		justify-content: space-between;
+		width: 100%;
+		align-self: self-end;
+		#lower-value {
+			font-size: 0.9em;
+		}
+		#upper-value {
+			font-size: 0.9em;
+		}
+	}
+	.noUi-connect {
+		background-color: $border-color;
+	}
+}
+
+// fixed mobile menu on product.html
+.mobile-menu {
+	display: none;
+	justify-content: space-evenly;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: $sub-menu-bg-opac;
+    height: 10vh;
+    width: 100%;
+    z-index: 1;
+    @media only screen and (min-width: 1000px) {
+		display: none;
+	}
+	.icon-container {
+		justify-content: center;
+    	align-items: center;
+		height: 100%;
+    	width: auto;
+    	flex-direction: column;
+    	a {
+    		flex-direction: column;
+			justify-content: center;
+			align-items: center;
+    	}
+		p {
+    		font-size: 0.7em;
+    		color: $text-dark;
+		}
+		img {
+			width: 6.7vh;
+    		height: auto;
+		}
+		.cart-cont-mobile {
+			width: 100%;
+    		height: 60%;
+    		justify-content: space-around;
+    		align-items: center;
+    		img {
+    			width: 5.5vh;
+    			height: auto;
+    		}
+    		.qty {
+				font-size: 0.9em;
+    		}
+		}
+		.qty {
+
+		}
+	}
+}
